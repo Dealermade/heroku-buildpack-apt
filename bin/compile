@@ -37,10 +37,7 @@ mkdir -p "$APT_STATE_DIR/lists/partial"
 
 mkdir -p $BUILD_DIR/.profile.d
 cat <<EOF > $BUILD_DIR/.profile.d/sources.list
-deb http://archive.ubuntu.com/ubuntu trusty main
-deb http://archive.ubuntu.com/ubuntu trusty-security main
-deb http://archive.ubuntu.com/ubuntu trusty-updates main
-deb http://archive.ubuntu.com/ubuntu trusty universe
+deb http://archive.ubuntu.com/ubuntu cosmic main universe
 EOF
 
 cp -a /etc/apt/trusted.gpg $BUILD_DIR/trusted.gpg
