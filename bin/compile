@@ -58,8 +58,7 @@ cat <<EOF > $BUILD_DIR/.profile.d/sources.list
 deb http://archive.ubuntu.com/ubuntu cosmic main universe
 EOF
 
-cp -a /etc/apt/trusted.gpg $BUILD_DIR/trusted.gpg
-APT_OPTIONS="-o debug::nolocking=true -o dir::cache=$APT_CACHE_DIR -o dir::state=$APT_STATE_DIR -o Dir::Etc::SourceList=$BUILD_DIR/.profile.d/sources.list -o Dir::Etc::Trusted=$BUILD_DIR/trusted.gpg -o Dir::Etc::Preferences=$BUILD_DIR/.profile.d/preferences"
+APT_OPTIONS="-o debug::nolocking=true -o dir::cache=$APT_CACHE_DIR -o dir::state=$APT_STATE_DIR"
 APT_OPTIONS="$APT_OPTIONS -o dir::etc::sourcelist=$APT_SOURCES"
 
 topic "Updating apt caches"
